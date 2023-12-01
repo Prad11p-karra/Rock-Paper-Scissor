@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script>
+    function toggleRules() {
+    const rulesBox = document.getElementById('rulesBox');
+    rulesBox.style.display = rulesBox.style.display === 'none' ? 'block' : 'none';
+  }
+
+</script>
+<body>
+    <div class="one">
+        <div class="two">
+            <div class="six">
+                <div id="ei"><p id="score1">Your Score: 0</p></div>
+            </div>
+            <div class="seven">
+                <div id="ni"> <p id="score2">computer<br>Score: 0</p></div>
+            </div>
+            <div class="three">ROCK</div>
+            <div class="four">PAPER</div>
+            <div class="five">SCISSOR</div>
+    </div>
+    <div class="rock"><a href=""><img src="fist.png" alt="HTML tutorial" ></a></div>
+    <div class="scissor"><a href=""><img src="finger.png" alt="HTML tutorial" ></a></div>
+    <div class="paper"><a href=""><img src="hand.png" alt="HTML tutorial" ></a></div>
+    <button onclick="toggleRules()" class="rule">Rules</button>
+    <div id="rulesBox">
+    <h3>Game Rule</h3>
+    <p>•Rock beats Scissors,Paper beats Rock and Scissors beats Paper </p>
+    <p>•Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</p>
+    <p>•Use rock, paper, scissors to settle minor decisions or simply play to pass the time</p>
+    <p>•If both players lay down the same hand, each player lays down another hand</p></div>
+  </div>
+  
+
+</html>

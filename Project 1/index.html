@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="first.js">    
+</head>
+<script>
+    function toggleRules() {
+        const rulesBox = document.getElementById('rulesBox');
+        rulesBox.style.display = rulesBox.style.display === 'none' ? 'block' : 'none';
+      }
+    let playerScore = 0;
+    let computerScore = 0;      
+    function playGame(playerChoice) {
+      const choices = ['rock', 'paper', 'scissors'];
+      const computerChoice = choices[Math.floor(Math.random() * 3)];
+  
+      let result = '';
+  
+      if (playerChoice === computerChoice) {
+        result = "It's a tie!";
+        
+      } else if (
+        (playerChoice === 'rock' && computerChoice === 'scissors') ||
+        (playerChoice === 'paper' && computerChoice === 'rock') ||
+        (playerChoice === 'scissors' && computerChoice === 'paper')
+      ) {
+        result = `You win! Against PC.`;
+        window.open("file:///C:/Users/Pradeep%20kumar/OneDrive/Desktop/Project%201/won.html");
+        playerScore++;
+        
+      } else {
+        result = `You lose!`;
+        computerScore++;
+      }      
+      document.getElementById('result').innerHTML = result;
+      document.getElementById('score1').innerHTML = `Your Score: ${playerScore}`;
+      document.getElementById('score2').innerHTML = `Computer Score: ${computerScore}`;
+      function toggleRules() {
+      const rulesBox = document.getElementById('rulesBox');
+      rulesBox.style.display = rulesBox.style.display === 'none' ? 'block' : 'none';
+      }          
+
+    }
+  </script>
+<body>
+
+    <div class="one">
+        <div class="two">
+            <div class="six">
+                <div id="ei"><p id="score1">Your Score: 0</p></div>
+            </div>
+            <div class="seven">
+                <div id="ni"> <p id="score2">computer<br>Score: 0</p></div>
+            </div>
+            <div class="three">ROCK</div>
+            <div class="four">PAPER</div>
+            <div class="five">SCISSOR</div>           
+        </div>
+        <button onclick="playGame('rock')" class="rock"><img src="fist.png" alt="fi"></button>
+        <p id="result"></p>
+        <button onclick="playGame('scissors')" class="scissor"><img src="finger.png" alt="se"></button>
+        <button onclick="playGame('paper')"class="paper" ><img src="hand.png" alt="th"></button>
+        <button onclick="toggleRules()" class="rule">Rules</button>        
+        <div id="rulesBox">
+        <h3>Game Rule</h3>
+        <p>•Rock beats Scissors,Paper beats Rock and Scissors beats Paper </p>
+        <p>•Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors.”</p>
+        <p>•Use rock, paper, scissors to settle minor decisions or simply play to pass the time</p>
+        <p>•If both players lay down the same hand, each player lays down another hand</p></div>            
+    </div>
+</body>
+</html>
